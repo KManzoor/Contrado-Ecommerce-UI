@@ -1,0 +1,9 @@
+<form [formGroup]="attributeForm"  (ngSubmit)="onFormSubmit()">
+    <div *ngFor="let item of attributes">
+    
+        <label>{{item.AttributeName}}</label>
+      <input formControlName="{{item.AttributeId}}" placeholder="{{item.AttributeName}}">
+     
+  </div>
+    <button mat-raised-button color="accent" >Submit</button>              
+ </form>
